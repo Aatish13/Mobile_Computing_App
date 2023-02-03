@@ -11,4 +11,10 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
     <string name="take_photo">Take Photo</string>
+    <string name="upload_photo">Predict Photo</string>
+    <string-array name="category">
+        <item>TV</item>
+        <item>Table</item>
+        <item>Chair</item>
+    </string-array>
 </resources>

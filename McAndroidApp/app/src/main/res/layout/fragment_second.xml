@@ -6,22 +6,65 @@
     android:layout_height="match_parent"
     tools:context=".SecondFragment">
 
-    <TextView
-        android:id="@+id/textview_second"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/button_second"
+    <ImageView
+        android:id="@+id/upload_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        android:src="@android:drawable/ic_menu_camera"
+        app:layout_constraintBottom_toTopOf="@+id/upload_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        tools:ignore="ImageContrastCheck" />
+
+<!--    <Spinner-->
+<!--        android:id="@+id/img_category_spinner"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="30dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_marginEnd="30dp"-->
+<!--        android:layout_marginBottom="10dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/upload_button"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/upload_image"-->
+<!--        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />-->
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/upload_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/outputTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
 
     <Button
-        android:id="@+id/button_second"
+        android:id="@+id/upload_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/previous"
+        android:layout_marginBottom="40dp"
+        android:text="@string/upload_photo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_second" />
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
